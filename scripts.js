@@ -1,0 +1,1 @@
+const textEncrypted = document.getElementById('textEncrypted').innerHTML = 'aqui va a aparecer tu texto cifrado'
