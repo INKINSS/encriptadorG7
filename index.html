@@ -3,28 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
     <title>EncriptadorG7</title>
   </head>
   <body>
+    <section class="firstSection">
     <header>
-      <h1>
+      <h1 class="titlePrincipal">
         ENCRIP <br />
         TADOR
       </h1>
     </header>
-    <section>
       <div class="inputText">
-        <input class="input" type="text" placeholder="cuentame algo..." />
+        <input class="input" id="textInput" type="text" placeholder="cuentame algo..." />
       </div>
       <div class="groupButton">
-        <button class="btn" id="encryptBtn">cifrar</button>
-        <button class="btn" id="decryptBtn">descifrar</button>
+        <button class="btn" id="encryptBtn" onclick="encryptedText()">cifrar</button>
+        <button class="btn" id="decryptBtn" onclick="decryptedText()">descifrar</button>
       </div>
-      <span class="spanDanger">¡espera!, recuerda que no puedes usar caracteres especiales ni mayúsculas</span>
+      <div class="textDanger">
+          <span class="spanDanger"><i class="fa-solid fa-circle-exclamation iconDanger"></i>
+            ¡espera!, recuerda que no puedes usar caracteres especiales ni mayúsculas</span>
+      </div>
     </section>
     <section class="secondSection">
+      <h3 class="titleTextEncrypted">texto encriptado</h3>
         <span id="textEncrypted" class="textEncrypted"></span>
+        <div class="groupButtonCopyClean">
+          <button class="btn btn-copy" id="buttonCopy" class="copy btn" onclick="copyTextToDesencrypted()">copiar</button>
+          <button class="btn btn-clean" id="buttonClean" class="btn" onclick="cleanTextEncrypted()">limpiar</button>
+        </div>
     </section>
     <script src="scripts.js"></script>
   </body>
