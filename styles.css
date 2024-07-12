@@ -8,12 +8,31 @@
 }
 
 header {
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
 }
 
+.titlePrincipal {
+    color: #575757;
+}
+
 body {
-    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.firstSection, header, .input {
+    background-color: #F5AC31;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.firstSection {
+    flex: 1;
 }
 
 .inputText, .input, .groupButton {
@@ -24,6 +43,7 @@ body {
 .input {
     border: none;
     text-align: center;
+    width: 500px;
 }
 
 input:focus {
@@ -31,38 +51,76 @@ input:focus {
     outline: none;
 }
 
-.inputText {
-    margin:  1.5rem 0;
-}
-
 .groupButton {
     gap: .5rem;
+    padding: 1rem 0;
 }
 
 .btn {
     padding: .4rem 1rem;
     border-radius: 5px;
     border: none;
+    width: 90px;
 }
 
 .spanDanger {
-    padding: 1rem 1.5rem;
     display: block;
     text-align: center;
     font-size: .8rem;
-    color: rgb(129, 129, 129);
+    color: rgb(107, 107, 107);
 }
 
+.iconDanger {
+    padding: 0;
+}
+
+.textDanger {
+    padding: 1rem .5rem;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+
 /* SECOND SECTION */
+
+.titleTextEncrypted {
+    color: #F5AC31;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
 
 .secondSection {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
+    background-color: #5183B5;
 }
 
 .textEncrypted {
     text-align: center;
+    margin: .5rem 0px 1rem 0px;
+    font-size: .8rem;
+    color: #F5AC31;
+}
+
+.groupButtonCleanCopy {
+    display: flex;
+}
+
+@media (min-width: 768px) and (max-width: 1500px) {
+    body {
+        flex-direction: row;
+    }
+    .titlePrincipal {
+        font-size: 2rem;
+    }
+
+    .textEncrypted {
+        padding: 0 20px;
+    }
 }
